@@ -20,10 +20,10 @@ jobs:
         component: [ "legs", "arms", "hats", "main" ]
     steps:
     - name: Checkout Code
+      uses: actions/checkout@v2
     - uses: sigstore/cosign-installer@main
       with:
         cosign-release: 'v1.0.0'
-    # uses: actions/checkout@v2
  
     - name: Login to GitHub Container Registry
       if: ${{ github.ref == 'refs/heads/master' || github.ref == 'refs/heads/release-*' }}
