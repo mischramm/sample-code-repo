@@ -37,7 +37,7 @@ jobs:
       uses: golangci/golangci-lint-action@v2
       with:
         version: v1.29
-        working-directory: ${{ matrix.component }
+        working-directory: ${{ matrix.component }}
         
     - name: Build
       id: docker_build
